@@ -1,0 +1,41 @@
+<div class="content">
+  <div class="header_post">
+    <a href="/">
+      <img class="flower_small" src="/images/flower.svg" alt="陌上花开">
+    </a>
+    <div class="post-title">
+      <span class="title">
+        <img class="tag-big" src="/images/tag.svg">
+        <%= page.tag %>
+      </span>
+    </div>
+  </div>
+  <div class="blog">
+  <!-- Posts -->
+    <section class="posts">
+      <% page.posts.each(function (post) { %>
+        <article class="post">
+          <div class="post-title">
+            <a class="post-title-link" href="<%- url_for(post.path) %>"><%= post.title %></a>
+          </div>
+          <div class="post-content">
+            <%- post.excerpt %>
+          </div>
+          <div class="post-meta">
+            <span class="post-time"><%- date(post.date, "YYYY.MM.DD") %></span>
+            <span class="tags-links">
+              <% post.tags.each(function (tag) { %>
+                <a href="<%= config.root %>tags/<%= tag.name %>/" rel="tag">
+                  <img class="tag" src="/images/tag.svg">
+                  <%- tag.name %>
+                </a>
+              <% }); %>
+            </span>
+          </div>
+        </article>
+      <% }) %>
+    </section>
+    <%- partial('_partial/paginator') %>
+  </div>
+  <%- partial('_partial/footer') %>
+</div>

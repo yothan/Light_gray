@@ -1,0 +1,71 @@
+html{
+  -webkit-font-smoothing: antialiased;
+}
+
+body{
+  font-family: "SF Pro Text","SF Pro Display","SF Pro Icons",'PingHei', 'PingFang SC',"Helvetica Neue","Helvetica","Arial",'Microsoft YaHei',sans-serif;
+  background-color: #fafafa;
+  color: #333333;
+  font-size: 16px;
+  margin: 0px;
+  overflow-x: hidden;
+/*  background-repeat: no-repeat;
+  background-image: url('/images/blog_bg.png');   */
+}
+
+p{
+  font-size: 14px;
+  color: #333;
+}
+
+h3{
+  font-weight: 500;
+}
+
+a{
+  text-decoration: none;
+  color: #333333
+}
+
+SVG{
+  xmlns:"http://www.w3.org/2000/svg";
+  version:"1.1";
+}
+
+div.content{
+  width: 840px;
+  margin: 0px auto;
+
+  .tag{
+    height: 12px;
+    position: relative;
+    top: 2px;
+    left: -2px;
+  }
+
+  .tag-big{
+    height: 24px;
+    position: relative;
+    top: 2px;
+    left: -2px;
+  }
+}
+
+.blog{
+  background-color: #ffffff;
+  width: 100%;
+  margin:60px auto;
+  box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
+}
+
+.blog_post{
+  background-color: #ffffff;
+  width: 100%;
+  margin:40px auto 60px;
+  box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
+}
+
+@import "_partial/footer";
+@import "_partial/header_index";
+@import "_partial/paginator";
+@import "_partial/post";

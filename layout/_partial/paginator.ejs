@@ -1,0 +1,10 @@
+<% if (page.total > 1){ %>
+  <nav class="page-nav">
+    <%- paginator({
+      prev_text: "今朝",
+      next_text: "过往",
+      end_size: "false",
+      mid_size: "false",
+    }) %>
+  </nav>
+<% } %>

@@ -1,0 +1,29 @@
+<div class="content">
+  <div class="header_post">
+    <a href="/">
+      <img class="flower_small" src="/images/flower.svg" alt="陌上花开">
+    </a>
+    <div class="post-title">
+      <span class="title"><%= page.title %></span>
+    </div>
+    <div class="post-meta">
+     <span class="post-time"><%- date(page.date, "YYYY.MM.DD") %></span>
+     <span class="tags-links">
+       <% page.tags.each(function (tag) { %>
+       <a href="<%= config.root %>tags/<%= tag.name %>/" rel="tag">
+         <img class="tag" src="/images/tag.svg">
+         <%- tag.name %>
+       </a>
+       <% }); %>
+     </span>
+   </div>
+  </div>
+  <div class="blog_post">
+    <article class="post">
+      <div class="post-content">
+        <%- page.content %>
+      </div>
+    </article>
+  </div>
+  <%- partial('_partial/footer') %>
+</div>
