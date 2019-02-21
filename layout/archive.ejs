@@ -25,9 +25,9 @@
 
         <% groupArr.reverse().forEach(function(item) { %>
           <h2 class="year"><%- item.year %></h2>
-          <ul class="list">
+          <div class="list">
             <%- partial('_partial/article-archive', {posts: item.posts}) %>
-          </ul>
+          </div>
         <% }) %>
 
       </div>

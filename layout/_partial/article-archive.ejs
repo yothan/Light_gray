@@ -1,10 +1,10 @@
 <% posts.forEach(function(item) { %>
-  <li>
+  <div class="post-archive">
     <a href="<%- config.root %><%- item.path %>" class="title">
       <%- item.title || theme.default_post_title || "Untitled" %>
     </a>
     <span class="date">
       <%- date(item.date, "MM.DD") %>
     </span>
-  </li>
+  </div>
 <% }); %>
