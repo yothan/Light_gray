@@ -20,9 +20,20 @@
   </div>
   <div class="blog_post">
     <article class="post">
-      <div class="post-content">
-        <%- page.content %>
-      </div>
+      
+      <!-- 短歌居中显示 -->
+      <% var a = /短歌/ ; %>
+      <% var b = page.tags.first().name ; %>
+      <% if (a.test(b)) { %>
+        <div class="post-content poetry">
+          <%- page.content %>
+        </div>
+      <% } else { %>
+        <div class="post-content">
+          <%- page.content %>
+        </div>
+      <% } %>
+
     </article>
   </div>
   <%- partial('_partial/footer') %>
